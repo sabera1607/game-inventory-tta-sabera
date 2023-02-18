@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://happy birthday darya.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="happy birthday darya" type="Sprite" parent="."]
+position = Vector2( 493.644, 296.012 )
+scale = Vector2( 0.233634, 0.193678 )
+texture = ExtResource( 1 )

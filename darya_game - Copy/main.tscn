@@ -1,0 +1,624 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://background/Layer_0001_8.png" type="Texture" id=1]
+[ext_resource path="res://atlas.png" type="Texture" id=2]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://darya_pic.jpg" type="Texture" id=4]
+[ext_resource path="res://background/Layer_0005_5.png" type="Texture" id=5]
+[ext_resource path="res://background/Layer_0004_Lights.png" type="Texture" id=6]
+[ext_resource path="res://background/Layer_0006_4.png" type="Texture" id=7]
+[ext_resource path="res://background/Layer_0002_7.png" type="Texture" id=8]
+[ext_resource path="res://background/Layer_0003_6.png" type="Texture" id=9]
+[ext_resource path="res://background/Layer_0007_Lights.png" type="Texture" id=10]
+[ext_resource path="res://background/Layer_0000_9.png" type="Texture" id=11]
+[ext_resource path="res://neaz_enemy.png" type="Texture" id=12]
+[ext_resource path="res://Timer.gd" type="Script" id=13]
+[ext_resource path="res://farida_enemy_2.png" type="Texture" id=14]
+[ext_resource path="res://farida_enemy_1.png" type="Texture" id=15]
+[ext_resource path="res://flag.png" type="Texture" id=16]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 128, 32, 0, 32, 0, 0, 128, 0 )
+
+[sub_resource type="ConcavePolygonShape2D" id=2]
+segments = PoolVector2Array( 17.4224, 16, 0.677536, 16, 0.677536, 16, 3.02182, 2.20712, 3.02182, 2.20712, 15.0782, 2.54202, 15.0782, 2.54202, 17.4224, 16 )
+
+[sub_resource type="ConcavePolygonShape2D" id=3]
+segments = PoolVector2Array( 16.9779, 15.9332, 0, 15.9332, 0, 15.9332, 3.58203, 1.86752, 3.58203, 1.86752, 14.2988, 3.87692, 14.2988, 3.87692, 16.9779, 15.9332 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 16, 15.603, 0.463043, 16, 2.47241, 2.87692, 13.524, 3.54669 )
+
+[sub_resource type="TileSet" id=5]
+resource_local_to_scene = true
+0/name = "atlas.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 96, 128, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "atlas.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 63, 259, 18, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "atlas.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 111, 258, 17, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "atlas.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 160, 259, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "atlas.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 326, 387, 1, 0 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "atlas.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( -2, 287, 325, 88 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 21.6396, 18.9445 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1449.05, 62.035 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 43.3376, 27.2587 )
+
+[sub_resource type="CircleShape2D" id=9]
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 10.5895
+
+[sub_resource type="CircleShape2D" id=11]
+
+[sub_resource type="CircleShape2D" id=12]
+
+[sub_resource type="CircleShape2D" id=13]
+
+[sub_resource type="CircleShape2D" id=14]
+
+[sub_resource type="CircleShape2D" id=15]
+radius = 9.17796
+
+[sub_resource type="CircleShape2D" id=16]
+
+[sub_resource type="CircleShape2D" id=17]
+
+[sub_resource type="CircleShape2D" id=18]
+
+[sub_resource type="CircleShape2D" id=19]
+
+[sub_resource type="CircleShape2D" id=20]
+
+[sub_resource type="CircleShape2D" id=21]
+
+[sub_resource type="CircleShape2D" id=22]
+
+[sub_resource type="CircleShape2D" id=23]
+
+[sub_resource type="CircleShape2D" id=24]
+
+[sub_resource type="CircleShape2D" id=25]
+radius = 10.269
+
+[sub_resource type="CircleShape2D" id=26]
+
+[sub_resource type="CircleShape2D" id=27]
+
+[sub_resource type="CircleShape2D" id=28]
+radius = 9.82988
+
+[sub_resource type="CircleShape2D" id=29]
+
+[sub_resource type="CircleShape2D" id=30]
+
+[sub_resource type="CircleShape2D" id=31]
+
+[sub_resource type="CircleShape2D" id=32]
+
+[sub_resource type="CircleShape2D" id=33]
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 37.0939, 20.7458 )
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 34.5566, 19.1752 )
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 30.8221, 17.9884 )
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 1571.18, 73.2642 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 36.6602, 340.246 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 24.852, 17.5113 )
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 10.3347, 12.1525 )
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 512.947, 298.518 )
+scale = Vector2( 1.10874, 0.756108 )
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 510.424, 298.518 )
+scale = Vector2( 1.10692, 0.756108 )
+texture = ExtResource( 7 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 512.947, 298.518 )
+scale = Vector2( 1.10511, 0.747625 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 511.265, 296.836 )
+scale = Vector2( 1.10511, 0.76035 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 513.788, 297.677 )
+scale = Vector2( 1.10692, 0.758229 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 512.752, 297.157 )
+scale = Vector2( 1.10552, 0.754424 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 514.332, 298.491 )
+scale = Vector2( 1.1038, 0.75706 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2( 513.224, 299.112 )
+scale = Vector2( 1.10508, 0.763058 )
+texture = ExtResource( 11 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 12, 5, 0, 35, 5, 0, 56, 5, 0, 69, 5, 0, 65540, 2, 0, 65541, 5, 0, 65564, 2, 0, 65570, 3, 0, 65579, 5, 0, 65590, 3, 0, 65603, 2, 0, 65607, 2, 0, 65613, 2, 0, 131081, 1, 0, 131117, 3, 0, 131136, 5, 0, 131148, 2, 0, 196648, 3, 0, 196657, 3, 0, 196668, 2, 0, 196691, 5, 0, 262147, 2, 0, 262208, 2, 0, 262212, 2, 0, 327704, 1, 0, 327755, 0, 0, 393228, 1, 0, 393257, 3, 0, 393270, 0, 0, 393278, 2, 0, 393286, 2, 0, 393288, 0, 0, 458777, 1, 0, 458783, 3, 0, 458804, 0, 0, 524304, 0, 0, 524332, 0, 0, 524337, 3, 0, 524338, 0, 0, 589831, 1, 0, 589837, 0, 0, 589857, 0, 0, 589861, 0, 0, 589871, 0, 0, 589888, 0, 0, 589904, 0, 0, 655387, 0, 0, 720896, 0, 0 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 48.6613, 323.587 )
+scale = Vector2( 0.434315, 0.35889 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -8.69074, 24.8015 )
+scale = Vector2( 0.645336, 0.682446 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -8.24438, 25.4629 )
+scale = Vector2( 2.30248, 2.78637 )
+shape = SubResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 1068.35, -66.8728 )
+current = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1358.68, 575.143 )
+shape = SubResource( 7 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="neaz_enemy" type="Sprite" parent="Area2D2"]
+position = Vector2( 595.06, 227.716 )
+scale = Vector2( 0.338933, 0.361354 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 594.934, 228.724 )
+shape = SubResource( 8 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+script = ExtResource( 13 )
+
+[node name="Control" type="Control" parent="Timer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Timer/Control"]
+
+[node name="Label" type="Label" parent="Timer/Control/CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 233.246, 297.171 )
+shape = SubResource( 9 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 392.206, 200.974 )
+shape = SubResource( 10 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 105.182, 137.364 )
+shape = SubResource( 11 )
+
+[node name="Area2D6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2( 135.765, 43.1335 )
+shape = SubResource( 12 )
+
+[node name="Area2D7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2( 296, 72 )
+shape = SubResource( 13 )
+
+[node name="Area2D8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2( 777.5, 169 )
+shape = SubResource( 14 )
+
+[node name="Area2D9" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
+position = Vector2( 809.646, 232.768 )
+shape = SubResource( 15 )
+
+[node name="Area2D10" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D10"]
+position = Vector2( 904.854, 41.0122 )
+shape = SubResource( 16 )
+
+[node name="Area2D11" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D11"]
+position = Vector2( 1000.5, 234 )
+shape = SubResource( 17 )
+
+[node name="Area2D12" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D12"]
+position = Vector2( 1095.1, 39.169 )
+shape = SubResource( 18 )
+
+[node name="Area2D13" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D13"]
+position = Vector2( 1288.02, 102.738 )
+shape = SubResource( 19 )
+
+[node name="Area2D14" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D14"]
+position = Vector2( 1320.5, 202 )
+shape = SubResource( 20 )
+
+[node name="Area2D15" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D15"]
+position = Vector2( 1448.71, 72.3431 )
+shape = SubResource( 21 )
+
+[node name="Area2D16" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D16"]
+position = Vector2( 1576.14, 103.945 )
+shape = SubResource( 22 )
+
+[node name="Area2D17" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D17"]
+position = Vector2( 1576.14, 264.458 )
+shape = SubResource( 23 )
+
+[node name="Area2D18" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D18"]
+position = Vector2( 1735.5, 41 )
+shape = SubResource( 24 )
+
+[node name="Area2D19" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D19"]
+position = Vector2( 1929, 106.181 )
+shape = SubResource( 25 )
+
+[node name="Area2D20" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D20"]
+position = Vector2( 2056.5, 138.525 )
+shape = SubResource( 26 )
+
+[node name="Area2D21" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D21"]
+position = Vector2( 2152.47, 42.3536 )
+shape = SubResource( 27 )
+
+[node name="Area2D22" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D22"]
+position = Vector2( 2184.49, 139.543 )
+shape = SubResource( 28 )
+
+[node name="Area2D24" type="Area2D" parent="."]
+position = Vector2( 2249, 203.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D24"]
+position = Vector2( 30.4058, -163.342 )
+shape = SubResource( 29 )
+
+[node name="Area2D23" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D23"]
+position = Vector2( 2249, 203.5 )
+shape = SubResource( 30 )
+
+[node name="Area2D25" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D25"]
+position = Vector2( 2440.6, 73.5244 )
+shape = SubResource( 31 )
+
+[node name="Area2D26" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D26"]
+position = Vector2( 2472.71, 41.8787 )
+shape = SubResource( 32 )
+
+[node name="Area2D27" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D27"]
+position = Vector2( 1992.5, 201 )
+shape = SubResource( 33 )
+
+[node name="Area2D28" type="Area2D" parent="."]
+
+[node name="farida_enemy_1" type="Sprite" parent="Area2D28"]
+position = Vector2( 913.67, 297.262 )
+scale = Vector2( 0.222734, 0.224206 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D28"]
+position = Vector2( 913.664, 296.914 )
+shape = SubResource( 34 )
+
+[node name="Area2D29" type="Area2D" parent="."]
+
+[node name="farida_enemy_2" type="Sprite" parent="Area2D29"]
+position = Vector2( 1202.8, 228.792 )
+scale = Vector2( 0.198472, 0.196131 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D29"]
+position = Vector2( 1202.79, 228.395 )
+shape = SubResource( 35 )
+
+[node name="Area2D30" type="Area2D" parent="."]
+
+[node name="farida_enemy_1" type="Sprite" parent="Area2D30"]
+position = Vector2( 1618.5, 217 )
+scale = Vector2( 0.180723, 0.178378 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D30"]
+position = Vector2( 1618.57, 216.375 )
+shape = SubResource( 36 )
+
+[node name="Area2D31" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D31"]
+position = Vector2( 1431.93, -195.622 )
+shape = SubResource( 37 )
+
+[node name="Area2D32" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D32"]
+position = Vector2( -53.74, 178.191 )
+shape = SubResource( 38 )
+
+[node name="Area2D33" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D33"]
+position = Vector2( 2769.03, 178.191 )
+shape = SubResource( 38 )
+
+[node name="Area2D34" type="Area2D" parent="."]
+
+[node name="neaz_enemy" type="Sprite" parent="Area2D34"]
+position = Vector2( 969.289, 93.1522 )
+scale = Vector2( 0.193548, 0.241654 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D34"]
+position = Vector2( 968.648, 93.8944 )
+shape = SubResource( 39 )
+
+[node name="Area2D35" type="Area2D" parent="."]
+
+[node name="flag" type="Sprite" parent="Area2D35"]
+position = Vector2( 2374.68, 180.357 )
+scale = Vector2( 0.0395999, 0.0434632 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D35"]
+position = Vector2( 2374.81, 180.617 )
+shape = SubResource( 40 )
+[connection signal="body_entered" from="Area2D" to="KinematicBody2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="KinematicBody2D" method="_on_Area2D2_body_entered"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D3" to="KinematicBody2D" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="KinematicBody2D" method="_on_Area2D4_body_entered"]
+[connection signal="body_entered" from="Area2D5" to="KinematicBody2D" method="_on_Area2D5_body_entered"]
+[connection signal="body_entered" from="Area2D6" to="KinematicBody2D" method="_on_Area2D6_body_entered"]
+[connection signal="body_entered" from="Area2D7" to="KinematicBody2D" method="_on_Area2D7_body_entered"]
+[connection signal="body_entered" from="Area2D8" to="KinematicBody2D" method="_on_Area2D8_body_entered"]
+[connection signal="body_entered" from="Area2D9" to="KinematicBody2D" method="_on_Area2D9_body_entered"]
+[connection signal="body_entered" from="Area2D10" to="KinematicBody2D" method="_on_Area2D10_body_entered"]
+[connection signal="body_entered" from="Area2D11" to="KinematicBody2D" method="_on_Area2D11_body_entered"]
+[connection signal="body_entered" from="Area2D12" to="KinematicBody2D" method="_on_Area2D12_body_entered"]
+[connection signal="body_entered" from="Area2D13" to="KinematicBody2D" method="_on_Area2D13_body_entered"]
+[connection signal="body_entered" from="Area2D14" to="KinematicBody2D" method="_on_Area2D14_body_entered"]
+[connection signal="body_entered" from="Area2D15" to="KinematicBody2D" method="_on_Area2D15_body_entered"]
+[connection signal="body_entered" from="Area2D16" to="KinematicBody2D" method="_on_Area2D16_body_entered"]
+[connection signal="body_entered" from="Area2D17" to="KinematicBody2D" method="_on_Area2D17_body_entered"]
+[connection signal="body_entered" from="Area2D18" to="KinematicBody2D" method="_on_Area2D18_body_entered"]
+[connection signal="body_entered" from="Area2D19" to="KinematicBody2D" method="_on_Area2D19_body_entered"]
+[connection signal="body_entered" from="Area2D20" to="KinematicBody2D" method="_on_Area2D20_body_entered"]
+[connection signal="body_entered" from="Area2D21" to="KinematicBody2D" method="_on_Area2D21_body_entered"]
+[connection signal="body_entered" from="Area2D22" to="KinematicBody2D" method="_on_Area2D22_body_entered"]
+[connection signal="body_entered" from="Area2D24" to="KinematicBody2D" method="_on_Area2D24_body_entered"]
+[connection signal="body_entered" from="Area2D23" to="KinematicBody2D" method="_on_Area2D23_body_entered"]
+[connection signal="body_entered" from="Area2D25" to="KinematicBody2D" method="_on_Area2D25_body_entered"]
+[connection signal="body_entered" from="Area2D26" to="KinematicBody2D" method="_on_Area2D26_body_entered"]
+[connection signal="body_entered" from="Area2D27" to="KinematicBody2D" method="_on_Area2D27_body_entered"]
+[connection signal="body_entered" from="Area2D28" to="KinematicBody2D" method="_on_Area2D28_body_entered"]
+[connection signal="body_entered" from="Area2D29" to="KinematicBody2D" method="_on_Area2D29_body_entered"]
+[connection signal="body_entered" from="Area2D30" to="KinematicBody2D" method="_on_Area2D30_body_entered"]
+[connection signal="body_entered" from="Area2D31" to="KinematicBody2D" method="_on_Area2D31_body_entered"]
+[connection signal="body_entered" from="Area2D32" to="KinematicBody2D" method="_on_Area2D32_body_entered"]
+[connection signal="body_entered" from="Area2D33" to="KinematicBody2D" method="_on_Area2D33_body_entered"]
+[connection signal="body_entered" from="Area2D34" to="KinematicBody2D" method="_on_Area2D34_body_entered"]
+[connection signal="body_entered" from="Area2D35" to="KinematicBody2D" method="_on_Area2D35_body_entered"]
